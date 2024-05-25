@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions - PatternWorld</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add the grid styles directly here for simplicity */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 20px;
+        }
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(174, 24, 24, 0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .grid-item div {
+            position: absolute;
+            bottom: 0;
+            background: rgba(233, 6, 146, 0.7);
+            color: #ebf9ff;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PatternWorld</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="services.html">PatternWORLD</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="attractions">
+            <h2>Our Attractions</h2>
+
+            <div class="section">
+                <h3>Grounds: Patterns in Nature</h3>
+                <article>
+                    <h4>Fractal Forest</h4>
+                    <p>Discover the beauty of nature's designs in the Fractal Forest, where each tree and leaf showcases the mathematical wonder of fractals.</p>
+                </article>
+                <article>
+                    <h4>Geometric Gardens</h4>
+                    <p>Wander through the Geometric Gardens, a peaceful, grid-based garden featuring meticulously arranged plants that play with stunning geometric patterns.</p>
+                </article>
+            </div>
+            
+            <div class="section">
+                <h3>Rides</h3>
+                <article>
+                    <h4>Motif Mountain</h4>
+                    <p>Embark on a thrilling journey through various cultural motifs and patterns. This roller coaster ride takes you through vibrant scenes inspired by global designs, providing an exhilarating experience with every twist and turn.</p>
+                </article>
+                <article>
+                    <h4>Pattern Playground</h4>
+                    <p>Designed for our younger visitors, the Pattern Playground offers a fun and safe environment. Kids can enjoy the spiral slide, climb through a maze of shapes, and discover patterns from around the world in interactive play areas.</p>
+                </article>
+            </div>
+            
+            <div class="section">
+                <h3>Town</h3>
+                <article>
+                    <h4>Kaleidoscope Castle</h4>
+                    <p>Step inside Kaleidoscope Castle, where every wall and window is a constantly shifting mosaic of colors and shapes. This magical experience is sure to captivate visitors of all ages as they explore the castle's many heavily-patterened rooms and corridors.</p>
+                </article>
+                <article>
+                    <h4>Tessellation Tower</h4>
+                    <p>At the heart of PatternWorld, you'll find the Tessellation Tower. Climb to the top of Tessellation Tower for a breathtaking view of PatternWorld. The tower itself is a marvel of design, covered in intricate tessellations that fit together perfectly. It's the perfect spot to take in the park's full splendor and witness the entire patchwork landscape of PatternWorld!</p>
+                </article>
+            </div>
+
+            <div class="section">
+                <h3>Pattern Path</h3>
+                <p>To navigate the park, just follow the Pattern Path! Stroll along a walkway adorned with over one hundred unique patterns from around the globe. Keep an eye out for the Pattern Posts— each section of the path is marked with informational signs that explain the history and cultural significance of the patterns you encounter on your adventure!</p>
+                
+                <h4>Featured Patterns</h4>
+                <p>Explore some of the beautiful patterns showcased throughout the park:</p>
+
+
+                <!-- Grid Layout for Images -->
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/american.jpeg" alt="American Quilt">
+                        <div>Pattern: American Quilt <br> Origin: United States of America</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/buta.jpeg" alt="Buta">
+                        <div>Pattern: Buta <br> Origin: India</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/chinese.webp" alt="Chinese Traditional">
+                        <div>Pattern: Chinese Traditional <br> Origin: China</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/french.webp" alt="La Toile de Jouy">
+                        <div>Pattern: La Toile de Jouy <br> Origin: France</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/italy.jpeg" alt="Carta Marmorizzata">
+                        <div>Pattern: Carta Marmorizzata <br> Origin: Italy</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/mud_cloth.jpeg" alt="Mud Cloth">
+                        <div>Pattern: Mud Cloth <br> Origin: Mali</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/navajo.jpeg" alt="Navajo Weaving">
+                        <div>Pattern: Navajo Weaving <br> Origin: Navajo Nation</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/otomi.jpeg" alt="Otomi">
+                        <div>Pattern: Otomi <br> Origin: Mexico</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/sami.webp" alt="Kråkesølvbroderi">
+                        <div>Pattern: Kråkesølvbroderi <br> Origin: Arctic Sami</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/seigaiha.jpeg" alt="Sei Gai Ha Mon">
+                        <div>Pattern: Sei Gai Ha Mon <br> Origin: Japan</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/tapa_masi.webp" alt="Tapa Masi">
+                        <div>Pattern: Tapa Masi <br> Origin: Fiji</div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/tartan.jpeg" alt="Tartan">
+                        <div>Pattern: Tartan - Origin: Scotland</div>
+                    </div>
+                </div>
+                <!-- End of Grid Layout for Images -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PatternWorld. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

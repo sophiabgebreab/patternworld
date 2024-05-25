@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatterWORLD - Pattern Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PatternWorld</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="services.html">PatternWORLD</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="patterworld">
+            <h2>Explore Patterns from Around the World</h2>
+            <p>PatternWorld is not all fantasy-- we really do live in a PatternWORLD! <br><br>Zoom, grab, and scroll to discover some of the amazing places our patterns come from.</p>
+            <div id="map"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PatternWorld. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map, centered on the Middle East
+        var map = L.map('map').setView([30, 35], 3);
+
+        // Set up the OSM layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Data for the patterns
+        var patterns = [
+            {lat: 37.7749, lng: -122.4194, name: 'American Quilt', info: 'Origin: United States of America'},
+            {lat: 28.6139, lng: 77.2090, name: 'Buta', info: 'Origin: India'},
+            {lat: 39.9042, lng: 116.4074, name: 'Chinese Traditional', info: 'Origin: China'},
+            {lat: 48.8566, lng: 2.3522, name: 'La Toile de Jouy', info: 'Origin: France'},
+            {lat: 41.9028, lng: 12.4964, name: 'Carta Marmorizzata', info: 'Origin: Italy'},
+            {lat: 12.6392, lng: -8.0029, name: 'Mud Cloth', info: 'Origin: Mali'},
+            {lat: 36.0672, lng: -112.2551, name: 'Navajo Weaving', info: 'Origin: Navajo Nation'},
+            {lat: 19.4326, lng: -99.1332, name: 'Otomi', info: 'Origin: Mexico'},
+            {lat: 69.6492, lng: 18.9560, name: 'Kråkesølvbroderi', info: 'Origin: Arctic Sami'},
+            {lat: 35.6895, lng: 139.6917, name: 'Sei Gai Ha Mon', info: 'Origin: Japan'},
+            {lat: -17.7134, lng: 178.0650, name: 'Tapa Masi', info: 'Origin: Fiji'},
+            {lat: 56.4907, lng: -4.2026, name: 'Tartan', info: 'Origin: Scotland'},
+            {lat: -33.8688, lng: 151.2093, name: 'Aboriginal Art', info: 'Origin: Australia'},
+            {lat: 51.1657, lng: 10.4515, name: 'Bavarian Folk Art', info: 'Origin: Germany'},
+            {lat: -15.7942, lng: -47.8822, name: 'Indigenous Patterns', info: 'Origin: Brazil'},
+            {lat: -34.6037, lng: -58.3816, name: 'Argentinian Poncho', info: 'Origin: Argentina'},
+            {lat: 60.4720, lng: 8.4689, name: 'Norwegian Rosemaling', info: 'Origin: Norway'},
+            {lat: 52.5200, lng: 13.4050, name: 'Berlin Wall Art', info: 'Origin: Germany'},
+            {lat: 55.7558, lng: 37.6173, name: 'Russian Matryoshka', info: 'Origin: Russia'},
+            {lat: 64.9631, lng: -19.0208, name: 'Icelandic Sweater', info: 'Origin: Iceland'},
+            {lat: 30.5595, lng: 22.9375, name: 'African Kente', info: 'Origin: Ghana'},
+            {lat: 31.2304, lng: 121.4737, name: 'Shanghainese Silk', info: 'Origin: China'},
+            {lat: -1.2921, lng: 36.8219, name: 'Maasai Beading', info: 'Origin: Kenya'},
+            {lat: 41.7151, lng: 44.8271, name: 'Georgian Kilim', info: 'Origin: Georgia'},
+            {lat: 14.5995, lng: 120.9842, name: 'Filipino Weaving', info: 'Origin: Philippines'},
+            {lat: 22.3964, lng: 114.1095, name: 'Hong Kong Embroidery', info: 'Origin: Hong Kong'},
+            {lat: 35.8617, lng: 104.1954, name: 'Xinjiang Carpets', info: 'Origin: China'},
+            {lat: 23.6345, lng: -102.5528, name: 'Mayan Patterns', info: 'Origin: Mexico'},
+            {lat: 26.8206, lng: 30.8025, name: 'Egyptian Hieroglyphs', info: 'Origin: Egypt'},
+            {lat: 40.4637, lng: -3.7492, name: 'Spanish Tiles', info: 'Origin: Spain'},
+            {lat: 31.7683, lng: 35.2137, name: 'Keffiyeh', info: 'Origin: Palestine'},
+            {lat: -25.2744, lng: 133.7751, name: 'Maori Patterns', info: 'Origin: New Zealand'},
+            {lat: 60.1282, lng: 18.6435, name: 'Swedish Dala Horse', info: 'Origin: Sweden'},
+            {lat: -38.4161, lng: -63.6167, name: 'Andean Textiles', info: 'Origin: Peru'},
+            {lat: 9.7489, lng: -83.7534, name: 'Costa Rican Boruca', info: 'Origin: Costa Rica'},
+            {lat: -0.7893, lng: 113.9213, name: 'Indonesian Batik', info: 'Origin: Indonesia'},
+            {lat: 3.1390, lng: 101.6869, name: 'Malay Songket', info: 'Origin: Malaysia'},
+            {lat: 4.5709, lng: -74.2973, name: 'Colombian Wayuu', info: 'Origin: Colombia'},
+            {lat: 7.8731, lng: 80.7718, name: 'Sri Lankan Beeralu Lace', info: 'Origin: Sri Lanka'},
+            {lat: 6.5244, lng: 3.3792, name: 'Yoruba Adire', info: 'Origin: Nigeria'},
+            {lat: 15.8700, lng: 100.9925, name: 'Thai Ikat', info: 'Origin: Thailand'},
+            {lat: 34.0522, lng: -118.2437, name: 'Chicano Art', info: 'Origin: Los Angeles, USA'},
+            {lat: 33.6844, lng: 73.0479, name: 'Pakistani Ajrak', info: 'Origin: Pakistan'}
+        ];
+
+        // Add markers to the map
+        patterns.forEach(function(pattern) {
+            L.marker([pattern.lat, pattern.lng]).addTo(map)
+                .bindPopup('<b>' + pattern.name + '</b><br>' + pattern.info);
+        });
+    </script>
+</body>
+</html>
+
+

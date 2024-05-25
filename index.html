@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Pattern World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles for marquee */
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            background: #e5fbf5;
+            color: #4a1af7;
+            font-size: 1.2rem;
+            font-style: italic;
+            padding: 25px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2375c8f9' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PatternWorld</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="services.html">PatternWORLD</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Scrolling Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            Planning a special occasion? Celebrate your next birthday at PatternWorld and experience the ultimate pattern party with all your friends! 
+        </div>
+    </div>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to Pattern Paradise!</h2>
+            <p> 
+                Immerse yourself in a vibrant world where art, mathematics, and imagination collide to create a one-of-a-kind experience. PatternWorld is not just a theme park; it's a journey into the mesmerizing realm of patterns.
+                <br><br>
+                Explore our attractions and discover the beauty and wonder of patterns found in nature, culture, and art. From the Fractal Forest to the Geometric Gardens, every corner of Pattern World is a feast for the senses.
+                <br><br>
+                Don't miss our thrilling rides, like Motif Mountain, where you'll embark on a roller coaster journey through cultural motifs from around the globe. For our younger visitors, the Pattern Playground awaits, featuring a spiral slide that promises endless fun.
+                <br><br>
+                Step into the heart of Pattern Town, where you'll find the ever-changing Kaleidoscope Castle and the awe-inspiring Tessellation Tower, offering panoramic views of our patchwork landscape.
+                <br><br>
+                Navigate the park along the Pattern Path, a winding trail adorned with over a hundred patterns from diverse cultures and traditions. Learn the stories behind each pattern and embark on a global adventure without leaving Pattern World.
+                <br><br>
+                Join us for a day of discovery, adventure, and endless patterns at Pattern World - the only place where patterns never clash!
+            </p>
+            <a href="attractions.html" class="cta-button">Explore Attractions</a>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PatternWorld. All rights reserved.</p>
+    </footer>
+</body>
+</html>
